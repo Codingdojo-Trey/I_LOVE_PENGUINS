@@ -1,0 +1,8 @@
+<h1>Penguins#index</h1>
+<p>Find me in app/views/penguins/index.html.erb</p>
+<%= flash[:notice] if flash[:notice] %>
+<% @penguins.each do |penguin| %>
+	<h2><%= penguin.name %> gender: <%= penguin.sex %></h2>
+	<h3><%= penguin.breed %></h3>
+	<a href="<%= penguin_path(penguin)%>">see more about this penguin!</a>
+<% end %>
