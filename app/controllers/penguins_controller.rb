@@ -30,6 +30,15 @@ class PenguinsController < ApplicationController
   end
 
   def destroy
+    if @penguin = Penguin.find(params[:id])
+      @penguin.destroy
+       redirect_to(penguins_path)
+       else
+      @errors = @penguin.errors.full_messages
+
+    end
+
+
   end
 
   #build our strong parameters

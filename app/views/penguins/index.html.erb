@@ -5,4 +5,5 @@
 	<h2><%= penguin.name %> gender: <%= penguin.sex %></h2>
 	<h3><%= penguin.breed %></h3>
 	<a href="<%= penguin_path(penguin)%>">see more about this penguin!</a>
+	<a href="penguins/<%=penguin.id%>" data-method='delete'>Destroy</a>
 <% end %>
